@@ -1,5 +1,5 @@
 # Xiaomi MiBand
-Library to work with Xiaomi MiBand 2/3 (Support python2/python3)
+Library to work with Xiaomi MiBand 2/3 (Supports python3)
 [Read the Article here](https://medium.com/@a.nikishaev/how-i-hacked-xiaomi-miband-2-to-control-it-from-linux-a5bd2f36d3ad)
 
 # Contributors & Info Sources
@@ -22,11 +22,15 @@ sudo hcitool lescan
 ```
 5) Run this to auth device
 ```sh
-python main.py --mac MAC_ADDRESS --init
+python main.py MAC_ADDRESS --init
 ```
 6) If you having problems(BLE can glitch sometimes) try this and repeat from 4)
 ```sh
 sudo hciconfig hci0 reset
+```
+7) Use the band with minimalistic UI by issuing (without parameters)
+```sh
+python main.py MAC_ADDRESS
 ```
 
 ### If you have trouble installing bluepy
